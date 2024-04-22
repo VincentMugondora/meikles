@@ -52,6 +52,205 @@ table {
   border-spacing: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.banner {
+  height: 60vh;
+  background: url("../image/Rectangle 21.jpg");
+  background-size: cover;
+}
+.banner .overlay {
+  background-color: rgba(0, 0, 0, 0.275);
+  width: 100%;
+  height: 100%;
+}
+.banner .mobile-navbar {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .mobile-navbar img {
+  width: 20%;
+}
+.banner .mobile-navbar .hamburger-menu {
+  z-index: 10;
+  background: transparent;
+  border-radius: 10%;
+  width: 15%;
+  height: 10%;
+  border: 3px solid brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+.banner .mobile-navbar .hamburger-menu .line {
+  width: 70%;
+  height: 3px;
+  background-color: brown;
+}
+.banner .nav {
+  display: none;
+}
+
+.about .image {
+  background: url("../image/Rectangle 14.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: end;
+}
+.about .image .purpose {
+  width: 30%;
+  margin-bottom: -60px;
+  height: 5rem;
+  background-color: brown;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bolder;
+}
+.about .text {
+  height: 50vh;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about .text h3 {
+  font-size: 2rem;
+  color: brown;
+}
+.about .text .text-one {
+  font-weight: bold;
+}
+.about .text .text-one span {
+  color: brown;
+  line-height: 20px;
+}
+.about .text div button {
+  padding: 13px 40px;
+  background-color: transparent;
+  border: 2px solid brown;
+  color: brown;
+  font-weight: bold;
+}
+
+.projects .text {
+  background-color: brown;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projects .text h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+.projects .text .icons {
+  display: flex;
+}
+.projects .text .icons img {
+  height: 20px;
+}
+.projects .image {
+  padding-top: 30px;
+}
+.projects .image .images-one {
+  background-color: brown;
+}
+.projects .image .images-one .img {
+  position: relative;
+}
+.projects .image .images-one .img img {
+  width: 100%;
+}
+.projects .image .images-one .img p {
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+  left: 10px;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.donate {
+  height: 60vh;
+  width: 100%;
+  background: url("../image/pexels-cdc-3992949 1.jpg") no-repeat;
+  background-size: cover;
+}
+.donate .overlay {
+  width: 100%;
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.441);
+}
+.donate .overlay .container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  color: #fff;
+}
+.donate .overlay p {
+  font-size: 1.5rem;
+}
+.donate .overlay .form {
+  display: flex;
+  gap: 10px;
+}
+.donate .overlay .form input[type=text] {
+  background: transparent;
+  color: #fff;
+  padding-right: 20px;
+  border: 2px solid white;
+}
+.donate .overlay .form input::-moz-placeholder {
+  color: white;
+  font-weight: bolder;
+}
+.donate .overlay .form input::placeholder {
+  color: white;
+  font-weight: bolder;
+}
+.donate .overlay .form button {
+  background-color: brown;
+  color: #fff;
+  border: none;
+  padding: 0px 40px;
+  font-weight: bold;
+}
+
+.responsible .text {
+  border: 2px solid brown;
+  height: 60vh;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.responsible .text .text-one {
+  font-weight: bold;
+}
+
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -67,7 +266,107 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 */
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .projects {
+    margin-top: -100px;
+  }
+}
 /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .banner {
+    height: 100vh;
+    background: url("../image/banner.jpg");
+    background-position: center;
+  }
+  .banner .mobile-navbar {
+    display: none;
+  }
+  .banner .nav {
+    display: block;
+    padding-top: 7vh;
+  }
+  .banner .nav .pc-nav {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 5px 10px black;
+  }
+  .banner .nav .pc-nav ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .banner .nav .pc-nav ul img {
+    height: 2.5rem;
+  }
+  .banner .nav .pc-nav .nav-icons {
+    width: 4rem;
+    height: 4rem;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about .image {
+    height: 50vh;
+  }
+  .about .image .purpose {
+    height: 7rem;
+  }
+  .about .text {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .projects {
+    margin-top: 50px;
+  }
+  .projects .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  .projects .text h2 {
+    font-size: 3em;
+  }
+  .projects .text p {
+    line-height: 30px;
+    color: #fff;
+  }
+  .projects .text .icons {
+    display: flex;
+    gap: 20px;
+  }
+  .projects .text .icons img {
+    height: 50px;
+  }
+  .projects .image {
+    background-color: brown;
+  }
+  .projects .image .images-one {
+    display: flex;
+    gap: 10px;
+    background-color: brown;
+  }
+  .projects .image .images-one .img {
+    position: relative;
+  }
+  .projects .image .images-one .img img {
+    width: 103%;
+  }
+  .projects .image .images-one .img p {
+    position: absolute;
+    z-index: 5;
+    bottom: 20px;
+    left: 10px;
+    font-weight: bolder;
+    color: #fff;
+  }
+}
 /* Extra large devices (large desktops, 1200px and up) */
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
