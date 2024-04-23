@@ -163,21 +163,23 @@ body {
 }
 .projects .text .icons {
   display: flex;
+  gap: 10px;
 }
 .projects .text .icons img {
-  height: 20px;
+  height: 10px;
 }
 .projects .image {
   padding-top: 30px;
 }
 .projects .image .images-one {
   background-color: brown;
+  display: flex;
 }
 .projects .image .images-one .img {
   position: relative;
 }
 .projects .image .images-one .img img {
-  width: 100%;
+  width: 99.9%;
 }
 .projects .image .images-one .img p {
   position: absolute;
@@ -238,7 +240,6 @@ body {
 
 .responsible .text {
   border: 2px solid brown;
-  height: 60vh;
   width: 100%;
   text-align: center;
   padding: 1rem;
@@ -249,6 +250,68 @@ body {
 }
 .responsible .text .text-one {
   font-weight: bold;
+}
+
+.footer {
+  background-color: #A40F1E;
+  padding: 1rem;
+  color: #fff;
+}
+.footer h3 {
+  font-size: 1.5rem;
+}
+.footer .text .radio .text-one {
+  display: flex;
+  gap: 10px;
+}
+.footer .text .radio .text-one p {
+  font-weight: bold;
+}
+.footer .text .radio form {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer .text .radio .circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #C4C4C4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .text .radio .circle .circle-one {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #000;
+}
+.footer .links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .links div {
+  display: flex;
+  flex-direction: column;
+}
+.footer .links div a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .join {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .join .icons {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 /*
@@ -268,7 +331,32 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
   .projects {
-    margin-top: -100px;
+    margin-top: -200px;
+  }
+  .responsible .text {
+    padding: 2rem;
+  }
+  .donate .overlay p {
+    font-size: 4rem;
+    width: 100%;
+  }
+  .donate .overlay .form button {
+    padding: 15px 60px;
+  }
+  .donate .overlay .form #name {
+    padding-right: 20rem;
+  }
+  .footer .text {
+    display: flex;
+  }
+  .footer .text .paragraph {
+    width: 60%;
+  }
+  .columns {
+    display: flex;
+  }
+  .columns .links {
+    width: 40%;
   }
 }
 /* Large devices (desktops, 992px and up) */
@@ -346,11 +434,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .projects .image {
     background-color: brown;
+    padding-top: 3px;
   }
   .projects .image .images-one {
     display: flex;
     gap: 10px;
-    background-color: brown;
   }
   .projects .image .images-one .img {
     position: relative;
@@ -365,6 +453,29 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     left: 10px;
     font-weight: bolder;
     color: #fff;
+  }
+  .donate .overlay p {
+    font-size: 4rem;
+    width: 75%;
+  }
+  .donate .overlay .form button {
+    padding: 15px 60px;
+  }
+  .donate .overlay .form #name {
+    padding-right: 30rem;
+  }
+  .responsible .text {
+    padding: 7rem;
+    text-align: center;
+  }
+  .footer .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .text .radio {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */

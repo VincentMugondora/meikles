@@ -180,9 +180,10 @@ body{
 
         .icons{
             display: flex;
+            gap: 10px;
 
             img{
-                height: 20px;
+                height: 10px;
             }
         }
     }
@@ -191,12 +192,15 @@ body{
         padding-top: 30px;
         .images-one{
             background-color: brown;
+            display: flex;
+            
             
             .img{
                 position: relative;
+                
 
                 img{
-                    width: 100%;
+                    width: 99.9%;
                 }
                 p{
                     position: absolute;
@@ -260,7 +264,6 @@ body{
 .responsible{
     .text{
         border: 2px solid brown;
-        height: 60vh;
         width: 100%;
         text-align: center;
         padding: 1rem;
@@ -271,6 +274,83 @@ body{
 
         .text-one{
             font-weight: bold;
+        }
+    }
+}
+
+.footer{
+    background-color: #A40F1E;
+    padding: 1rem;
+    color: #fff;
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .text{
+        .radio{
+
+            .text-one{
+                display: flex;
+                gap: 10px;
+
+                p{
+                    font-weight: bold;
+                }
+            }
+            form{
+                margin-top: 5px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+           
+            .circle{
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background: #C4C4C4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .circle-one{
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background: #000;
+                }
+            }
+        }
+    }
+
+    .links{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        div{
+            display: flex;
+            flex-direction: column;
+
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    .join{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .icons{
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
         }
     }
 }
@@ -302,11 +382,57 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 @media (min-width: 768px) {     
     
 .projects{
-    margin-top: -100px;
+margin-top: -200px;
 
 }
   
+.responsible{
+    .text{
+        padding: 2rem;
+    }
 
+}
+
+.donate{
+    .overlay{
+
+        p{
+            font-size: 4rem;
+            width: 100%;
+        }
+        .form{
+            
+           button{
+            padding: 15px 60px;
+           }
+           #name{
+            padding-right: 20rem;
+            
+           }
+        }
+
+
+    }
+}
+
+.footer{
+    .text{
+        display: flex;
+
+        .paragraph{
+            width: 60%;
+        }
+    }
+}
+
+
+    .columns{
+        display: flex;
+
+        .links{
+            width: 40%;
+        }
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -372,7 +498,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
        }
 
        .projects{
-            margin-top: 50px;
+             margin-top: 50px;
         .text{
             display: flex;
             flex-direction: column;
@@ -401,11 +527,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
         .image{
             background-color: brown;
+            padding-top: 3px;
 
             .images-one{
                 display: flex;
                 gap: 10px;
-                background-color: brown;
+                
 
                .img{
                 position: relative;
@@ -426,6 +553,44 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         }
        }
 
+       .donate{
+        .overlay{
+            p{
+                font-size: 4rem;
+                width: 75%;
+            }
+            .form{
+               button{
+                padding: 15px 60px;
+               }
+               #name{
+                padding-right: 30rem;
+                
+               }
+            }
+        }
+       }
+       
+       .responsible{
+        .text{
+            padding: 7rem;
+            text-align: center;
+        }
+       }
+
+       .footer{
+        .text{
+            display: flex;
+            flex-direction: column;
+
+            .radio{
+                margin-top: 30px;
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+       }
        
 }
 
