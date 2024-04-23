@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: "Jost-Medium";
+  src: url("../Inter,Jost,Montserrat,Poppins,Roboto/Jost/static/Jost-Medium.ttf");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,6 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 100px;
+  font-family: "Jost-Medium";
 }
 
 .banner {
@@ -379,7 +384,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 2px 5px 10px black;
+    box-shadow: 0px 0px 10px black;
   }
   .banner .nav .pc-nav ul {
     display: flex;
@@ -387,7 +392,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     align-items: center;
   }
   .banner .nav .pc-nav ul img {
-    height: 2.5rem;
+    height: 4rem;
   }
   .banner .nav .pc-nav .nav-icons {
     width: 4rem;
@@ -473,9 +478,13 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     flex-direction: column;
   }
   .footer .text .radio {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     gap: 20px;
+  }
+  .footer .columns a {
+    line-height: 25px;
+    font-weight: bold;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */

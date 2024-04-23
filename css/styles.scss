@@ -5,6 +5,11 @@
    License: none (public domain)
 */
 
+@font-face {
+    font-family: "Jost-Medium";
+    src: url("../Inter,Jost,Montserrat,Poppins,Roboto/Jost/static/Jost-Medium.ttf");
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,6 +58,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 100px;
+    font-family: "Jost-Medium";
 }
 
 .banner{
@@ -455,7 +461,7 @@ margin-top: -200px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                box-shadow: 2px 5px 10px black;
+                box-shadow: 0px 0px 10px black;
     
                 ul{
                     display: flex;
@@ -463,7 +469,7 @@ margin-top: -200px;
                     align-items: center;
 
                     img{
-                        height: 2.5rem;
+                        height: 4rem;
                     }
                 }
     
@@ -584,9 +590,16 @@ margin-top: -200px;
             flex-direction: column;
 
             .radio{
-                margin-top: 30px;
+                margin-top: 20px;
                 display: flex;
                 gap: 20px;
+            }
+        }
+
+        .columns{
+            a{
+                line-height: 25px;
+                font-weight: bold;
             }
         }
 
