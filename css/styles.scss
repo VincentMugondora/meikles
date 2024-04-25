@@ -204,6 +204,7 @@ body{
         display: flex;
         flex-direction: column;
         gap: 20px;
+        color: #fff;
 
         h2{
             color: #fff;
@@ -212,6 +213,7 @@ body{
 
         .icons{
             display: flex;
+            gap: 10px;
 
             img{
                 height: 20px;
@@ -226,6 +228,16 @@ body{
             display: flex;
             gap: 1px;
             margin-top: -2px;
+
+            .img:hover{
+                p{
+                    transform: translateY(-100px);
+                    color: brown;
+                    scale: 1.2;
+                    transition: 2s ease-in-out;
+                    background-blend-mode: darken;
+                }
+            }
             
             .img{
                 position: relative;
@@ -240,6 +252,7 @@ body{
                     left: 5px;
                     font-weight: bold;
                     color: #fff;
+                    transition: 2s ease-in-out;
                 }
                }
         }
@@ -285,7 +298,7 @@ body{
                 background-color: brown;
                 color: #fff;
                 border: none;
-                padding: 0px 40px;
+                padding: 10px 10px;
                 font-weight: bold;
             }
         }
@@ -558,7 +571,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
                 img{
                     height: 50px;
-                    box-shadow: 0px 2px 10px black;
                 }
             }
 
@@ -595,16 +607,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
        .donate{
         .overlay{
             p{
-                font-size: 4rem;
-                width: 95%;
+                font-size: 2.93rem;
+                width: 60%;
             }
             .form{
                button{
                 padding: 15px 60px;
                }
                #name{
-                padding-right: 30rem;
-                
+                padding-right: 20rem;
+                padding-left: 20px;
                }
             }
         }
@@ -614,12 +626,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         .text{
             padding: 7rem;
             text-align: center;
+            line-height: 25px;
         }
        }
 
        .footer{
            display: flex; 
            align-items: center;
+
+           h3{
+            font-size: 2.5rem;
+           }
            
            .text{
             width: 40%;
@@ -644,6 +661,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
             margin-top: -25px;
             display:flex;
             justify-content: center;
+
+            .links{
+                a{
+                    line-height: 25px;
+                }
+            }
            }
 
        }
