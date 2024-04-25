@@ -111,6 +111,12 @@ body{
 }
 
 .about{
+
+    .image:hover{
+        background-color: black;
+        opacity: 90%;
+    }
+
     .image{
         background: url("../image/Rectangle 14.jpg");
         background-size: cover;
@@ -132,6 +138,17 @@ body{
             align-items: center;
             color: #fff;
             font-weight: bolder;
+            transition: 1s ease-in-out;
+        }
+
+        .purpose:hover{
+            transform: translateY(20px);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px black;
+            transition: 1s ease-in-out;
+            scale: 1.2;
+            background: white;
+            color: brown;
         }
     }
 
@@ -164,6 +181,16 @@ body{
                 border: 2px solid brown;
                 color: brown;
                 font-weight: bold;
+                transition: 2s ease-in-out;
+            }
+
+            button:hover{
+                scale: 1.1;
+                transition: 2s ease-in-out;
+                transform: translate(10px);
+                border-radius: 10px;
+                background: brown;
+                color: white;
             }
         }
     }
@@ -465,8 +492,13 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     
                 ul{
                     display: flex;
-                    gap: 40px;
+                    gap: 70px;
                     align-items: center;
+                    color: brown;
+
+                    li:hover{
+                        text-decoration: underline;
+                    }
 
                     img{
                         height: 2.5rem;
@@ -526,6 +558,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
                 img{
                     height: 50px;
+                    box-shadow: 0px 2px 10px black;
                 }
             }
 

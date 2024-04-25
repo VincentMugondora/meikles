@@ -107,6 +107,10 @@ body {
   display: none;
 }
 
+.about .image:hover {
+  background-color: black;
+  opacity: 90%;
+}
 .about .image {
   background: url("../image/Rectangle 14.jpg");
   background-size: cover;
@@ -128,6 +132,16 @@ body {
   align-items: center;
   color: #fff;
   font-weight: bolder;
+  transition: 1s ease-in-out;
+}
+.about .image .purpose:hover {
+  transform: translateY(20px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+  transition: 1s ease-in-out;
+  scale: 1.2;
+  background: white;
+  color: brown;
 }
 .about .text {
   height: 50vh;
@@ -153,6 +167,15 @@ body {
   border: 2px solid brown;
   color: brown;
   font-weight: bold;
+  transition: 2s ease-in-out;
+}
+.about .text div button:hover {
+  scale: 1.1;
+  transition: 2s ease-in-out;
+  transform: translate(10px);
+  border-radius: 10px;
+  background: brown;
+  color: white;
 }
 
 .projects .text {
@@ -388,8 +411,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .banner .nav .pc-nav ul {
     display: flex;
-    gap: 40px;
+    gap: 70px;
     align-items: center;
+    color: brown;
+  }
+  .banner .nav .pc-nav ul li:hover {
+    text-decoration: underline;
   }
   .banner .nav .pc-nav ul img {
     height: 2.5rem;
@@ -436,6 +463,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .projects .text .icons img {
     height: 50px;
+    box-shadow: 0px 2px 10px black;
   }
   .projects .image {
     background-color: brown;
