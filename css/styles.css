@@ -6,19 +6,87 @@
   font-family: "jost";
   src: url("../Jost/Jost-VariableFont_wght.ttf");
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,8 +96,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -37,16 +114,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -59,8 +140,13 @@ table {
 body {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
   font-family: "jost";
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .banner {
@@ -78,6 +164,55 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0px;
+  position: relative;
+}
+.banner .mobile-navbar .active-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: white;
+}
+.banner .mobile-navbar .active-lines .line {
+  transform: rotate(-45deg);
+  position: absolute;
+  background: white;
+}
+.banner .mobile-navbar .active-lines .middle {
+  opacity: 0;
+}
+.banner .mobile-navbar .active-lines .line-2 {
+  transform: rotate(45deg);
+  position: absolute;
+  background: white;
+}
+.banner .mobile-navbar .links {
+  display: none;
+  width: 70vw;
+  height: 110vw;
+  background: rgba(248, 239, 239, 0.923);
+  position: absolute;
+  top: 0;
+  right: -12px;
+  margin-right: -70vw;
+  transition: 0.5s ease-in-out;
+}
+.banner .mobile-navbar .links ul {
+  width: 70vw;
+  height: 110vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.banner .mobile-navbar .links ul li {
+  font-size: 1.5rem;
+}
+.banner .mobile-navbar .sliding {
+  display: block;
+  transform: translateX(-70vw);
+  transition: 0.5s ease-in-out;
 }
 .banner .mobile-navbar img {
   width: 20%;
@@ -86,17 +221,14 @@ body {
   z-index: 10;
   background: transparent;
   border-radius: 10%;
-  width: 15%;
-  height: 10%;
+  width: 3.5rem;
+  height: 3rem;
   border: 3px solid brown;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10%;
-  position: fixed;
-  top: 5px;
-  right: 5px;
 }
 .banner .mobile-navbar .hamburger-menu .line {
   width: 70%;
@@ -133,15 +265,6 @@ body {
   color: #fff;
   font-weight: bolder;
   transition: 1s ease-in-out;
-}
-.about .image .purpose:hover {
-  transform: translateY(20px);
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px black;
-  transition: 1s ease-in-out;
-  scale: 1.2;
-  background: white;
-  color: brown;
 }
 .about .text {
   height: 50vh;
@@ -438,6 +561,15 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .about .purpose:hover {
+    transform: translateY(20px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+    transition: 1s ease-in-out;
+    scale: 1.2;
+    background: white;
+    color: brown;
   }
   .about .image {
     height: 50vh;
